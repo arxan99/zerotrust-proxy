@@ -1,0 +1,17 @@
+{
+  "alice": {
+    "salt": "a1f3c9e2b7d04e15",
+    "hash": "b5fda8f5f1324a06f34d29bf7bfa9431cde71b01605883d6272b46538f2a5e2b",
+    "group": "engineering"
+  },
+  "bob": {
+    "salt": "9c2e7a10d4b85f36",
+    "hash": "c87e98035de8ee7418daae5b4ef516ef7c8b9e4e6af60ca1cc7f63551188e57c",
+    "group": "finance"
+  },
+  "guest1": {
+    "salt": "5e8b3d27c1f94a60",
+    "hash": "7f17e733b1421af6b4fcb117b7386d04a5653ddaeb106fcafdf1d9110f3e15dd",
+    "group": "guest"
+  }
+}

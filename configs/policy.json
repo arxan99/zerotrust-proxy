@@ -1,0 +1,33 @@
+{
+  "categories": {
+    "malware": ["evil.test", "*.malware-c2.test"],
+    "gambling": ["*.bet365.com", "*.pokerstars.com"],
+    "social": ["*.facebook.com", "*.instagram.com", "*.x.com"],
+    "dev-tools": ["*.github.com", "*.githubusercontent.com", "pypi.org", "*.pythonhosted.org", "proxy.golang.org", "*.docker.io"]
+  },
+  "groups": {
+    "engineering": {
+      "default_action": "block",
+      "rules": [
+        { "name": "block-malware", "action": "block", "categories": ["malware"] },
+        { "name": "block-executables", "action": "block", "extensions": [".exe", ".msi", ".scr"] },
+        { "name": "allow-dev-tools", "action": "allow", "categories": ["dev-tools"] },
+        { "name": "allow-docs", "action": "allow", "domains": ["*.wikipedia.org", "example.com", "*.example.com"] }
+      ]
+    },
+    "finance": {
+      "default_action": "block",
+      "rules": [
+        { "name": "block-malware", "action": "block", "categories": ["malware"] },
+        { "name": "allow-business", "action": "allow", "domains": ["example.com", "*.example.com"] }
+      ]
+    },
+    "guest": {
+      "default_action": "allow",
+      "rules": [
+        { "name": "block-malware", "action": "block", "categories": ["malware"] },
+        { "name": "block-gambling", "action": "block", "categories": ["gambling"] }
+      ]
+    }
+  }
+}
